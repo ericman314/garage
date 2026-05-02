@@ -20,7 +20,7 @@ module.exports = {
       user: 'eric',
       host: '45.56.94.188',
       ref: 'origin/main',
-      repo: 'git@github.com:ericman314/garage.git',
+      repo: 'https://github.com/ericman314/garage.git',
       path: '/home/eric/garage',
       'pre-setup': '',
       'post-setup': 'ln -sfn /home/eric/garage/shared/config current/config && npm install --omit=dev',
