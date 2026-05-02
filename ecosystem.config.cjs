@@ -22,9 +22,7 @@ module.exports = {
       ref: 'origin/main',
       repo: 'https://github.com/ericman314/garage.git',
       path: '/home/eric/garage',
-      'pre-setup': '',
-      'post-setup': 'ln -sfn /home/eric/garage/shared/config current/config && npm install --omit=dev',
-      'post-deploy': 'ln -sfn /home/eric/garage/shared/config current/config && npm install --omit=dev && pm2 startOrReload ecosystem.config.cjs --only garage',
+      'post-deploy': 'npm install --omit=dev && pm2 startOrReload ecosystem.config.cjs --only garage',
     },
   },
 }
