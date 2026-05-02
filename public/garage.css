@@ -1,0 +1,67 @@
+#doorState {
+  text-transform: uppercase;
+}
+
+html, body {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito Sans', sans-serif;
+  color: white;
+  background: linear-gradient(0deg, #424242 0%, #535353 100%);
+  text-align: center;
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+}
+
+button {
+  background: #ffffff9e;
+  padding: 10px;
+  width: 49%;
+  border: solid #003157 1px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 16pt;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+#loginForm {
+  padding: 0 1%;
+}
+
+#loginForm input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border: solid #003157 1px;
+  border-radius: 4px;
+  font-size: 16pt;
+  font-family: 'Nunito Sans', sans-serif;
+  background: white;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#loginForm button {
+  width: 100%;
+}
+
+#logoutButton {
+  position: fixed;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: none;
+  border: none;
+  padding: 8px 12px;
+  width: auto;
+  color: white;
+  font-weight: normal;
+  font-size: 12pt;
+  text-decoration: underline;
+  cursor: pointer;
+}

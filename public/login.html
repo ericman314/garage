@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="garage.css">
+  <title>Garage — Login</title>
+</head>
+<body>
+  <br/>
+  <h1>Garage Door</h1>
+  <form id="loginForm">
+    <input id="password" type="password" placeholder="Password" autocomplete="current-password" autofocus />
+    <button type="submit">LOG IN</button>
+    <h3 id="error"></h3>
+  </form>
+  <script>
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault()
+      const password = document.getElementById('password').value
+      const err = document.getElementById('error')
+      err.textContent = ''
+      const res = await fetch('/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ password }),
+      })
+      if (res.ok) {
+        location.href = '/'
+      } else {
+        err.textContent = 'Wrong password'
+      }
+    })
+  </script>
+</body>
+</html>
