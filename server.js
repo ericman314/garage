@@ -111,19 +111,19 @@ app.get('/getDoorState', auth, (req, res) => {
 })
 
 /**
- * GET /command
+ * POST /command
  *
  * Typically issued by a web client user
  *
- * Query params:
+ * Body:
  *   command: The desired command to send to the door: open or close.
  */
-app.get('/command', auth, (req, res) => {
-  if (req.query.command === 'open') {
+app.post('/command', auth, (req, res) => {
+  if (req.body?.command === 'open') {
     command = 'open'
     commandTimestamp = Date.now()
   }
-  if (req.query.command === 'close') {
+  if (req.body?.command === 'close') {
     command = 'close'
     commandTimestamp = Date.now()
   }

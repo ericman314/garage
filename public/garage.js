@@ -43,11 +43,11 @@ $(() => {
   }, 1000)
 
   $('#openButton').click(evt => {
-    $.get('/command', { command: 'open' })
+    $.post('/command', { command: 'open' })
   })
 
   $('#closeButton').click(evt => {
-    $.get('/command', { command: 'close' })
+    $.post('/command', { command: 'close' })
   })
 
   $('#logoutButton').click(evt => {
